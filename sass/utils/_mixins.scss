@@ -1,0 +1,49 @@
+@mixin font-heading {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin tablette {
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+@mixin button {
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    box-shadow: 0 4px 10px rgb(191, 191, 191);
+    cursor: pointer;
+    &:hover {
+       opacity: 0.8;
+       box-shadow: 0 8px 10px rgb(121, 121, 121);
+       transition: all 0.4s ease-in-out;
+    }
+}
+
+@mixin boxshadow {
+    box-shadow: 0 4px 10px rgb(191, 191, 191);
+}
+
+@mixin heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: like .4s ease;
+        }
+}

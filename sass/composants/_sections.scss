@@ -1,0 +1,288 @@
+@import "./../utils/variables";
+@import "./../utils/mixins";
+
+/*----------------------------------------------------
+                     LOADER
+----------------------------------------------------*/
+
+.loading {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: loading 2s ease-in-out 1s 1 normal forwards;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 90px;
+    background-color: $color-secondary;
+    animation: loader 1s linear infinite;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 30px;
+        height: 90px;
+        background-color: $color-tertiary;
+        animation: loader 1s linear 1s infinite;
+    }
+}
+
+.loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 30px;
+    height: 90px;
+    background-color: $color-primary;
+    animation: loader 1s linear 1s infinite;
+}
+
+@keyframes loader {
+    0% { 
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+}
+
+  /*----------------------------------------------------
+                     SECTION LOCATION
+----------------------------------------------------*/
+
+.location {
+    margin-top: 3px;
+    background-color: rgb(237, 237, 237);
+    padding: 15px 0;
+    .loc__input {
+        display: flex;
+        justify-content: center;
+        i {
+            font-size: 1rem;
+        }
+        input {
+            font-size: 1rem;
+            padding-left: 20px;
+            max-width: 150px;
+        }
+        ::placeholder {
+            color: black;
+        }
+    }
+}
+
+  /*----------------------------------------------------
+                     SECTION EXPLORE
+----------------------------------------------------*/
+
+.explore {
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    padding: 40px;
+    &__title {
+        padding-bottom: 15px;
+    }
+    h3 {
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    p {
+        font-weight: 100;
+    }
+    button {
+        @include button; //mixin button
+        padding: 20px 30px;
+        }
+    }
+
+  /*----------------------------------------------------
+            SECTION OPERATION (FONCTIONNEMENT)
+----------------------------------------------------*/
+
+.operation {
+    padding: 30px 30px;
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-size: 1.2rem;
+        @include tablette {
+           text-align: center;
+        }
+        @include desktop {
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+
+}
+.operation__step {
+    
+    display: flex;
+    align-items: center;
+    border-radius: 1.3rem;
+    padding: 15px;
+    margin: 20px auto;
+    background: rgb(240, 240, 240);
+    position: relative;
+    max-width: 90%;
+    cursor: pointer;
+    @include boxshadow;
+    @include tablette {
+        justify-content: center;
+    }
+        &:hover  {
+        background: #f8efff;
+        transition: all 0.3s ease-in-out;
+
+        } 
+
+        &:hover i {
+            color: #9356DC;
+    
+        } 
+        
+}
+
+.operation__step-active {
+
+    background-color: #f8efff;
+}
+
+.operation__step i {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.operation__step-active #store {
+
+        color: #9356DC;
+}
+
+
+.operation__step__number {
+    position: absolute;
+    left: -5%;
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.8rem;
+    background-color: $color-primary; 
+    @include tablette {
+       left: -2%;
+     }
+}
+
+  /*----------------------------------------------------
+                     SECTION RESTAURANT
+----------------------------------------------------*/
+
+section.restaurant {
+    background-color: rgb(247, 247, 247);
+    padding: 50px 0;
+}
+
+.restaurant {
+        h3{
+        margin-left: 30px;
+        font-size: 1.5rem;
+        @include desktop {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-right: 30px;
+        }
+    }
+    .container {
+        width: 87%;
+        margin: 20px auto;
+        border-radius: 15px;
+        position: relative;
+            @include boxshadow;
+            @include desktop {
+                width: 50%;
+            }
+        }
+      
+    .flag {
+        position: absolute;
+        background-color: #99E2D0;
+        padding: 5px 10px;
+        top: 8%;
+        right: 5%;
+        font-size: 0.8rem;
+        color: #05785b;
+    }
+    .pic {
+        & img {
+            border-radius: 20px 20px 0 0 ;
+            height: auto;
+            width: 100%;
+        } 
+    }
+    .descriptif {
+        position: relative;
+    }
+    .name--bold {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 15px 0 5px 15px;
+    }
+    .loc {
+        font-weight: 300;
+        margin: 0;
+        padding: 5px 0 20px 15px;
+    }
+    .like {
+        position: absolute;
+        top: 20%; left: 85%;
+            & > i {
+            font-size: 2rem;
+            background-color: transparent;
+        }
+
+    i.fas {
+        @include heart;
+        }
+    }
+}
+
+@keyframes like {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

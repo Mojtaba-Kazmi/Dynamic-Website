@@ -1,0 +1,19 @@
+header {
+    padding: 25px 0 10px 0;
+    box-shadow: 0 2px 20px rgb(191, 191, 191);
+    .header__logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        width: 150px;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        left: 30px;
+        font-size: 1.1rem;
+        color: black;
+    }
+  
+}

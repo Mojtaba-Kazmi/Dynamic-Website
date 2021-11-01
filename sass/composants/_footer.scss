@@ -1,0 +1,27 @@
+@import "./../utils/mixins";
+footer {
+    background-color: #373333;
+    padding: 5px 0 30px 20px;
+   
+    
+    a {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    h4 {
+        color: white;
+        margin: 20px 0;
+        font-weight: 400;
+    }
+    i {
+        margin-right: 10px;
+        margin-left: 0;
+        font-size: 0.8rem;
+        color: white;
+    }
+    p {
+        margin: 5px 0;
+    }
+
+}

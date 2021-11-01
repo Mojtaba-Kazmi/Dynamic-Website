@@ -1,0 +1,23 @@
+{
+  "name": "kazmisaidmojtaba_03_24092021",
+  "version": "1.0.0",
+  "description": "Project oh my food",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "node-sass --watch ./sass/main.scss:./css/main.css --style compressed",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mojtaba-Kazmi/KAZMISaidMojtaba_03_24092021.git"
+  },
+  "author": "SMK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mojtaba-Kazmi/KAZMISaidMojtaba_03_24092021/issues"
+  },
+  "homepage": "https://github.com/Mojtaba-Kazmi/KAZMISaidMojtaba_03_24092021#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}
