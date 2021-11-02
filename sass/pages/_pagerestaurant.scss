@@ -58,15 +58,33 @@ i.fas {
 ----------------------------------------------------*/
 //animation menu apparition en décalage
 .menu__list {
-    animation-delay: .1s;
-    &.entrees {
-        animation: slideup .3s;
+    animation-delay: 1s;
+    &.entrees1 {
+        animation: slideup 1s;
     }
-    &.plats {
-        animation: slideup .9s; 
+    &.entrees2 {
+        animation: slideup 2s;
     }
-    &.desserts {
-        animation: slideup 1.8s; 
+    &.entrees3 {
+        animation: slideup 3s;
+    }
+    &.plats1 {
+        animation: slideup 1s; 
+    }
+    &.plats2 {
+        animation: slideup 2s; 
+    }
+    &.plats3 {
+        animation: slideup 3s; 
+    }
+    &.desserts1 {
+        animation: slideup 1s; 
+    }
+    &.desserts2 {
+        animation: slideup 2s; 
+    }
+    &.desserts3 {
+        animation: slideup 3s; 
     }
 }
 
