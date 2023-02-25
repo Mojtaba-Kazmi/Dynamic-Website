@@ -51,6 +51,4 @@ Sur tablette et desktop, le site devra s’adapter, mais ces supports n’étant
 * Le site doit être parfaitement compatible avec les dernières versions desktop de
 Chrome et Firefox.
 
-### Testez le projet
-https://mojtaba-kazmi.github.io/KAZMISaidMojtaba_03_24092021/
 
